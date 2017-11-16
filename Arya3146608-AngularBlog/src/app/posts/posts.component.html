@@ -1,0 +1,31 @@
+<div class="col s12">
+  <h4 class="header  center">Recent Blogs</h4>
+  <div class="col s6 m5"   *ngFor='let items of blog'>
+
+    <div class="card horizontal">
+      <div class="card-stacked">
+        <div class="card-content">
+          <table>
+            <tr>
+              <td><b>Category : </b>{{items.Category}}<br></td>
+            </tr>
+            <tr>
+              <td><b>Title : </b>{{items.Title}}<br></td>
+            </tr>
+            <tr>
+              <td><b>Description  : </b>{{items.Description}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="card-action">
+         <app-ratings [rating]="items.Ratings"></app-ratings>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>
+

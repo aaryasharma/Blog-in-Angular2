@@ -1,0 +1,53 @@
+{
+  "blogs": [
+    {
+      "Category": "science",
+      "Title": "chemistry",
+      "Description": "It is branch of science that deals with elements and its changes.",
+      "id": 1,
+      "ratings": 4.5,
+      "username": "vish"
+    },
+    {
+      "UserName": "shely",
+      "Category": "technology",
+      "Title": "computer",
+      "Description": "An electronic device which run on our instructions.",
+      "Ratings": 3,
+      "id": 2
+    },
+    {
+      "UserName": "john",
+      "Category": "sports",
+      "Title": "badminton",
+      "Description": "john play well.",
+      "Ratings": 2,
+      "id": 3
+    },
+    {
+      "UserName": "aryasharma",
+      "Category": "technology",
+      "Title": "Angular",
+      "Description": "It is framework of javascript.",
+      "Ratings": 1,
+      "id": 8
+    },
+    {
+      "Category": "arts",
+      "Title": "sanskrit",
+      "Description": "computer can understand sanskrit language.its easy language.",
+      "id": 9,
+      "ratings": 2.2,
+      "username": "ratan"
+    },
+    {
+      "UserName": "ankit",
+      "Category": "computers",
+      "Title": "Database",
+      "Description": "It manages data and its manipulation.",
+      "ratings": 3,
+      "id": 10
+    }
+
+  ]
+}

@@ -1,0 +1,49 @@
+<nav class="teal darken-2">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">{{title}}</a>
+  </div>
+</nav>
+
+
+<div class="container">
+  <p>Enter the Category of Blog:</p>
+  <div class="row">
+    <div class="col s12 md10">
+      <div class="card-panel teal">
+          <span class="white-text">
+            <input placeholder="filters" name="filters" id="filters" type="text"  [(ngModel)]="filters" class="validate">
+            <label for="filters"></label>
+            <input type="button" value="Filter" (click)="filterPost(filters)">
+          </span>
+      </div>
+    </div>
+
+  </div>
+  <div>
+    <hr>
+    <h5>Your required Blog:</h5>
+    <div class="col s6 m5" *ngFor='let blog of filteredBlog'>
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content">
+            <table>
+
+              <tr>
+                <td><b>Category:</b>{{blog.Category}}<br></td>
+              </tr>
+              <tr>
+                <td><b>Title:</b>{{blog.Title}}<br></td>
+              </tr>
+              <tr>
+                <td><b>Description:</b>{{blog.Description}}</td>
+              </tr>
+            </table>
+          </div>
+          <div class="card-action">
+            <app-ratings [rating]="blog.Ratings"></app-ratings>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+

@@ -1,0 +1,24 @@
+
+
+<head>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<div class="app">
+
+  <nav class="teal darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo center">{{title}}</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a routerLink="/add"><i class="material-icons dp48">add_to_queue</i>Add</a></li>
+        <li><a routerLink="/filter"><i class="material-icons dp48">search</i>Filter</a></li>
+        <li><a href="/edit"><i class="material-icons dp48">edit</i>Edit</a></li>
+        <li><a href="/favourites"><i class="material-icons dp48">favorite_border</i>Favourite</a></li>
+      </ul>
+    </div>
+  </nav>
+  <hr>
+  <div class="row">
+    <app-posts></app-posts>
+  </div>
+</div>

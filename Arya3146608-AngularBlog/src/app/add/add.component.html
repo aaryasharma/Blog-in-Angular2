@@ -1,0 +1,104 @@
+<nav class="teal darken-2">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">{{title}}</a>
+  </div>
+</nav>
+
+<div class="row" >
+  <form class="col s6">
+
+    <div class="row">
+      <div class="input-field col s6"><b>User-Name</b>
+        <input placeholder="userName" name="UserNameBlog" id="userName" required minlength="5"  maxlength="20" type="text"
+               [(ngModel)]="UserName" class="validate" #UserNameBlog="ngModel">
+          <label for="userName"></label>
+          <div *ngIf="UserNameBlog.errors&&(UserNameBlog.dirty||UserNameBlog.touched)" class="alert alert-danger">
+            <div [hidden]="!UserNameBlog.errors.required">
+              User Name is required.
+            </div>
+            <div [hidden]="!UserNameBlog.errors.minlength">
+              User Name must be atleast 3 characters.
+            </div>
+
+            <div [hidden]="!UserNameBlog.errors.maxlength">
+              User Name cannot exceed than 20 characters.
+            </div>
+          </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6"><b>Category</b>
+        <input placeholder="category" name="blogCategory" id="category" type="text"
+             required minlength="4" maxlength="20"  [(ngModel)]="Category" class="validate"  #blogCategory="ngModel">
+        <label for="Category"></label>
+        <div *ngIf="blogCategory.errors&&(blogCategory.dirty||blogCategory.touched)" class="alert alert-danger">
+        <div [hidden]="!blogCategory.errors.required">
+          Category is required.
+        </div>
+        <div [hidden]="!blogCategory.errors.minlength">
+          Categry must be atleast 4 characters.
+        </div>
+
+        <div [hidden]="!blogCategory.errors.maxlength">
+          Category cannot exceed than 20 characters.
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row">
+      <div class="input-field col s6"><b>Title</b>
+        <input placeholder="title" name="blogtitle" id="title" type="text" required minlength="5" [(ngModel)]="Title"
+          required minlength="4" maxlength="20"     class="validate" #blogtitle="ngModel">
+        <label for="Title"></label>
+        <div *ngIf="blogtitle.errors&&(blogtitle.dirty||blogtitle.touched)" class="alert alert-danger">
+          <div [hidden]="!blogtitle.errors.required">
+            Title is required.
+          </div>
+          <div [hidden]="!blogtitle.errors.minlength">
+            Title must be atleast 4 characters.
+          </div>
+
+          <div [hidden]="!blogtitle.errors.maxlength">
+            Title cannot exceed than 20 characters.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+      <div class="row">
+        <div class="input-field col s6"><b>Description</b>
+          <input placeholder="description" name="blogdescription" id="description" type="text" required minlength="20"
+                 [(ngModel)]="Description" class="validate" #blogdescription="ngModel">
+          <label for="description"></label>
+          <div *ngIf="blogdescription.errors&&(blogdescription.dirty||blogdescription.touched)" class="alert alert-danger">
+            <div [hidden]="!blogdescription.errors.required">
+              Description is required.
+            </div>
+            <div [hidden]="!blogdescription.errors.minlength">
+              Description must be atleast 20 characters.
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+       <div class="btn">
+      <input type="button" value="Add" (click)="addItem(UserName,Category,Title,Description)"><br>
+       </div>
+
+  </form>
+</div>
+
+

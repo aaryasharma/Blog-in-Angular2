@@ -1,0 +1,79 @@
+<nav class="teal darken-2">
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo center">{{title}}</a>
+  </div>
+</nav>
+<div class="exists" *ngIf="items">
+<div class="row">
+  <div class="input-field col s6"><b>Category</b>
+    <input placeholder="Category" name="blogcategory" id="Category" type="text"
+           required minlength="4" maxlength="20"
+           [(ngModel)]="items.Category" class="validate" #blogcategory="ngModel">
+    <label for="Category"></label>
+
+    <div *ngIf="blogcategory.errors&&(blogcategory.dirty||blogcategory.touched)" class="alert alert-danger">
+      <div [hidden]="!blogcategory.errors.required">
+        Category is required.
+      </div>
+      <div [hidden]="!blogcategory.errors.minlength">
+        Categry must be atleast 4 characters.
+      </div>
+
+      <div [hidden]="!blogcategory.errors.maxlength">
+        Category cannot exceed than 20 characters.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="input-field col s6"><b>Category</b>
+    <input placeholder="Title" name="blogtitle" id="Title" type="text"
+           required minlength="4" maxlength="20"
+           [(ngModel)]="items.Title" class="validate" #blogtitle="ngModel">
+    <label for="Title"></label>
+
+    <div *ngIf="blogtitle.errors&&(blogtitle.dirty||blogtitle.touched)" class="alert alert-danger">
+      <div [hidden]="!blogtitle.errors.required">
+        Title is required.
+      </div>
+      <div [hidden]="!blogtitle.errors.minlength">
+        Title must be atleast 4 characters.
+      </div>
+
+      <div [hidden]="!blogtitle.errors.maxlength">
+        Title cannot exceed than 20 characters.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s6"><b>Description</b>
+    <input placeholder="Description" name="blogdescription" id="Description" type="text"
+           required minlength="20"
+           [(ngModel)]="items.Description" class="validate" #blogdescription="ngModel">
+    <label for="Description"></label>
+
+    <div *ngIf="blogdescription.errors&&(blogdescription.dirty||blogdescription.touched)" class="alert alert-danger">
+      <div [hidden]="!blogdescription.errors.required">
+        Description is required.
+      </div>
+      <div [hidden]="!blogtitle.errors.minlength">
+        Description must be atleast 20 characters.
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="btn">
+  <input type="button" value="Update" (click)="updateItem(items.Category,items.Title,items.Description)"><br>
+</div>
+
+</div>
+

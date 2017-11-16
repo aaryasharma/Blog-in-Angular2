@@ -1,0 +1,27 @@
+
+<div class="container">
+  <h4 class="header center">{{title}}</h4>
+
+<div class="row" >
+  <div class="col s12 m4" style="height:300px;" *ngFor='let blog of favourites'>
+    <div class="card-panel teal">
+      <table>
+        <tr>
+          <td><b>Category : </b>{{blog.Category}}<br></td>
+        </tr>
+        <tr>
+          <td><b>Title : </b>{{blog.Title}}<br></td>
+        </tr>
+        <tr>
+          <td><b>Description  : </b>{{blog.Description}}</td>
+        </tr>
+      </table>
+      <div class="card-action">
+        <app-ratings [rating]="blog.Ratings"></app-ratings>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
